@@ -32,7 +32,7 @@ class HomePageController extends GetxController with SingleGetTickerProviderMixi
   fetchData() async {
     isLoading = true;
     final dataList = await homePageRepository.getRepoIssues();
-    log(dataList.length);
+    log(dataList.length.toString());
 
     _issueModel.addAll(dataList);
     isLoading = false;
